@@ -1,50 +1,83 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Read similarity based on deBruijn graphs : Vladimír Macko">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Read similarity based on deBruijn graphs</title>
+    <meta charset="UTF-8">
+    <title>Read similarity based on deBruijn graphs by vlejd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Read similarity based on deBruijn graphs</h1>
+      <h2 class="project-tagline">Vladimír Macko</h2>
+      <a href="https://github.com/vlejd/diplomka" class="btn">View on GitHub</a>
+      <a href="https://github.com/vlejd/diplomka/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/vlejd/diplomka/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/vlejd/diplomka">View on GitHub</a>
+    <section class="main-content">
+      <h3>
+<a id="basic-information" class="anchor" href="#basic-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic information</h3>
 
-          <h1 id="project_title">Read similarity based on deBruijn graphs</h1>
-          <h2 id="project_tagline">Vladimír Macko</h2>
+<p>student: Bc. Vladimir Macko, vladimir.v.macko(funky a)gmail.com 
+mentor: Mgr. Tomáš Vinař, PhD</p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/vlejd/diplomka/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/vlejd/diplomka/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<h3>
+<a id="idea" class="anchor" href="#idea" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Idea</h3>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="page-is-under-development" class="anchor" href="#page-is-under-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Page is under development.</h3>
-      </section>
-    </div>
+<p>DNA sequencing is currently a hot topic with a lot research and potential. One of important thing we would like to do is to compare two different DNA sequences and determine where they differ. This would be a straight forward process if we would have the correct sequences. Unfortunately we do not have the access to the original sequence, because we can not directly measure the whole DNA.</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Read similarity based on deBruijn graphs maintained by <a href="https://github.com/vlejd">vlejd</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+<p>We have a lot of short substrings from the original DNA sequence. This short substrings are called reads. A standard procedure is to take reads and construct a De Bruijn graph. Based on paths in this graph we can reconstruct the most likely original DNA sequence. Comparing two DNA sequences means to compare two most likely sequence reconstructions. In case we have a lot of (good coverage) high precision reads, this is the best think we can do. However a lot of genomes do are sequenced with small coverage in sake of speed and price. </p>
+
+<p>For example let's look on a cancer diagnostic. We would sequence a suspicious cell's DNA and we would like to compare it with a presumably healthy cell. Right now we can not afford to sequence those cells with high coverage so our DNA reconstruction, however we do not care about the whole sequences. We just want to see the most probable difference between them. This difference than could be a symptom of a cancer.</p>
+
+<h3>
+<a id="materials" class="anchor" href="#materials" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Materials</h3>
+
+<p>We will build on top of Mr. Boza's work on probabilistic <a href="https://almob.biomedcentral.com/articles/10.1186/s13015-015-0052-6">GAML</a>. We will try to extend this approach to compare sequences before the final reconstruction, therefore we will directly compare De Bruijn graphs.</p>
+
+<h3>
+<a id="sections" class="anchor" href="#sections" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sections</h3>
+
+<h4>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h4>
+
+<p>Here I will go through a basic terminology and proper problem definition</p>
+
+<h4>
+<a id="current-methods" class="anchor" href="#current-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current methods</h4>
+
+<p>Here I will test current state of the art methods for finding the differences and I will try to set their limits. These results will be benchmarks for our methods.</p>
+
+<h4>
+<a id="probabilistic-model" class="anchor" href="#probabilistic-model" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Probabilistic model</h4>
+
+<h4>
+<a id="implementation" class="anchor" href="#implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation</h4>
+
+<p>Here we will present details of our implementation and test it on synthetic data as well as on actually measured data.</p>
+
+<h4>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h4>
+
+<p>Here we will find cancer.</p>
+
+<h4>
+<a id="future-plans-and-extensions" class="anchor" href="#future-plans-and-extensions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future plans and extensions</h4>
+
+<p>Here we will describe possible extensions of this work and thinks that could be improved.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/vlejd/diplomka">Read similarity based on deBruijn graphs</a> is maintained by <a href="https://github.com/vlejd">vlejd</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
