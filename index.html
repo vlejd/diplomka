@@ -45,25 +45,38 @@ mentor: Mgr. Tomáš Vinař, PhD</p>
 <h4>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h4>
 
-<p>Here I will go through a basic terminology and proper problem definition</p>
+<p>Here I will go through a basic terminology and proper problem definition.</p>
 
 <h4>
 <a id="current-methods" class="anchor" href="#current-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current methods</h4>
 
-<p>Here I will test current state of the art methods for finding the differences and I will try to set their limits. These results will be benchmarks for our methods.</p>
+<p>Here I will test current state of the art methods for finding the differences and I will try to set their limits. 
+These results will be benchmarks for our methods.
+Moreover we will look at the effects of low coverage on gene assembly and consequences in terms of assembly similarities.</p>
+
+<h4>
+<a id="data" class="anchor" href="#data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h4>
+
+<p>Here we describe a current state of common reads with their characteristics. This will give us ideas about that we can assume in our probabilistic model and what pitfalls we need to take into account. </p>
 
 <h4>
 <a id="probabilistic-model" class="anchor" href="#probabilistic-model" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Probabilistic model</h4>
 
-<h4>
-<a id="implementation" class="anchor" href="#implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation</h4>
+<p>Comparing two concrete assemblies suffers from the fact, that event thought those assemblies are the most probable ones (with the highest likelihood), they may not incorporate some important sequences which could be consistently found in less likely assemblies. Thus we would like to consider every possible reasonable assembly. This is however obviously intractable. To overcome this problem we will focus on probabilistic models, which are able to take into account all possible assemblies. </p>
 
-<p>Here we will present details of our implementation and test it on synthetic data as well as on actually measured data.</p>
+<p>To create a probabilistic model for our similarity problem we need to define the measurement of reads in such probabilistic manner.  </p>
+
+<h4>
+<a id="catchy-name-for-our-tool-that-will-be-implemented" class="anchor" href="#catchy-name-for-our-tool-that-will-be-implemented" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Catchy name for our tool that will be implemented.</h4>
+
+<p>Here we will present details of our implementation and test it on synthetic data as well as on actually measured data.
+This section will contain </p>
 
 <h4>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h4>
 
-<p>Here we will find cancer.</p>
+<p>We will use our tool on synthetic data and we will see the results. 
+Moreover we try to use our tool on real life data and hopefully we will save some lives. </p>
 
 <h4>
 <a id="future-plans-and-extensions" class="anchor" href="#future-plans-and-extensions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future plans and extensions</h4>
