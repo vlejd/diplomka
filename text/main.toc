@@ -1,8 +1,0 @@
-\select@language {slovak}
-\contentsline {chapter}{\IeC {\'U}vod}{1}{chapter*.8}
-\contentsline {chapter}{\numberline {1}Something else}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}section}{2}{section.1.1}
-\contentsline {chapter}{\numberline {2}Final}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Subfinal}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}sub sub final}{3}{subsection.2.1.1}
-\contentsline {chapter}{Appendix A}{7}{chapter*.10}
