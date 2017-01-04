@@ -1,11 +1,11 @@
 \documentclass[12pt, oneside]{book}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=2cm]{geometry}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=3.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage[slovak]{babel} % vypnite pre prace v anglictine
+%\usepackage[slovak]{babel} % vypnite pre prace v anglictine
 \usepackage{paralist}
 \usepackage{indentfirst}
 \usepackage{listings}
@@ -15,10 +15,11 @@
 \usepackage[toc,page]{appendix}
 \usepackage{hyperref}
 \usepackage{cmap} 
+\usepackage{amssymb}
 
 \linespread{1.25} % hodnota 1.25 by mala zodpovedat 1.5 riadkovaniu
 
-\newtheorem{definicia}{Definícia}[section]
+\newtheorem{definicia}{Definition}[section]
 
 \setcounter{secnumdepth}{3}
 
@@ -97,10 +98,10 @@ Fakulta matematiky, fyziky a informatiky
 
 \noindent
 \begin{tabular}{ll}
-Študijný program: & \program \\
-Študijný odbor: & \mfodbor \\
-Školiace pracovisko: & \mfpracovisko \\
-Školiteľ: & \mfskolitel \\
+Study programme: & \program \\
+Field of study: & \mfodbor \\
+Department: & \mfpracovisko \\
+Supervisor: & \mfskolitel \\
 % Konzultant: & \mfkonzultant \\
 \end{tabular}
 
@@ -138,7 +139,7 @@ Fakulta matematiky, fyziky a informatiky
 ~
 
 \vfill
-{\bf Poďakovanie:}
+{\bf acknowledgment:}
 %TODO
 
 % --- Koniec poďakovania
