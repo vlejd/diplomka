@@ -9,3 +9,8 @@
 *.lot
 *.out
 *.gz
+*.aux
+*.blg
+*.dvi
+*.lof
+*.toc
