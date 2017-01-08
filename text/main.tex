@@ -32,7 +32,7 @@
 % --- Vyplnte podla vasho zadania
 % -------------------
 \def\mfrok{2016}
-\def\mfnazov{Genome comparison based on raw read and paired read data.}
+\def\mfnazov{Identifying Differences Between Sequencing Data Sets}
 \def\mftyp{Diploma thesis}
 \def\mfautor{Vladimír Macko}
 \def\mfskolitel{Mgr. Tomáš Vinař, PhD}
@@ -149,7 +149,13 @@ Supervisor: & \mfskolitel \\
 % -------------------
 \newpage 
 \section*{Abstrakt}
-%TODO
+Zjednodušene môžeme povedať, že sekvenačný beh je množina krátkych podreťazcov vzorkovaných z dlhého neznámeho reťazca. 
+Pre dva zadané sekvenačné behy je úlohou identifikovať rozdiely medzi ich zodpovedajúcimi neznámymi reťazcami.
+
+Tento problém bol v minulosti riešený kombinatorickými metódami pre prípady s veľkými sekvenačnými behmi, 
+napr. keď množstvo dát v sekvenačnom behu bolo viac ako desať násobok dĺžky neznámeho reťazca. 
+Cieľom tejto práce je vytvoriť nové metódy založené na pravdepodobnostnej interpretácii dát. 
+Takýto prístup umožné riešiť problém v ďalších prípadoch, napr. pre malé alebo hybridné sekvenačné behy.
 
 \paragraph*{Kľúčové slová:} %TODO
 % --- Koniec Abstrakt - Slovensky
@@ -160,8 +166,9 @@ Supervisor: & \mfskolitel \\
 % -------------------
 \newpage 
 \section*{Abstract}
+In the simplest possible formulation, a sequencing data set is a set of short substrings sampled from an unknown string. Given two sequencing data sets, the goal is to identify differences between the two underlying unknown strings.
 
-%TODO
+This task has been explored by combinatorial methods in scenarios with large sequencing data sets, where amount of data in the set is large (e.g., more than 10x of the length of the underlying string). The goal of this thesis is to develop new methods based on probabilistic interpretation of the data. Such approach may help to solve the problem in other scenarios, including small and hybrid data sets.
 
 \paragraph*{Keywords:} %TODO
 
